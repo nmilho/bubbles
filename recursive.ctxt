@@ -1,0 +1,18 @@
+#BlueJ class context
+comment0.target=recursive
+comment0.text=\r\n\ Primeiro\ teste\ com\ BlueJ\ e\ com\ Java\ desde\ 1900\ e\ troca\ o\ passo\r\n\ @author\ Nuno\ Milho\ @version\ 1.00\r\n
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment2.params=
+comment2.target=void\ printGrid()
+comment3.params=row\ col
+comment3.target=char\ getColor(int,\ int)
+comment4.params=row\ col\ color
+comment4.target=void\ putBubble(int,\ int,\ char)
+comment5.params=row\ col
+comment5.target=boolean\ hasBubble(int,\ int)
+comment6.params=row\ col
+comment6.target=void\ removeBubble(int,\ int)
+comment7.params=col\ row\ color\ matches
+comment7.target=void\ locateNeighbors(int,\ int,\ char,\ java.lang.String)
+numComments=8
