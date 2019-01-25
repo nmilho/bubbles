@@ -7,12 +7,6 @@ import javafx.embed.swing.*;
 import javafx.application.*;
 import javafx.scene.text.*;
 import java.util.*;
-
-
-
-
-
-
 import javafx.scene.*;
 import javafx.scene.layout.*;
 import javafx.scene.control.*;
@@ -30,10 +24,9 @@ public class BubbleWorld
     private Pane pane;
     private int GRID_SIZE = 30;
     private int TOTAL_COLS = 5;
-    private int ROWS_TO_FILL = 5;
-    private int ROWS_EMPTY = 5;
-    private int TOTAL_ROWS = ROWS_EMPTY + ROWS_TO_FILL;
+    private int TOTAL_ROWS = 10;
     private Bubble [][] bubbleGrid;
+    private static int RADIUS = 15;
     
 
     
@@ -44,9 +37,9 @@ public class BubbleWorld
     public BubbleWorld()
     {
         // initialise instance variables
-        this.pane = new Pane();
+        /*this.pane = new Pane();
         this.pane.setPrefSize(TOTAL_COLS * GRID_SIZE, (TOTAL_ROWS) * GRID_SIZE);
-        Scene scene = new Scene(this.pane, Color.AZURE);
+        Scene scene = new Scene(this.pane, Color.AZURE);*/
         bubbleGrid = new Bubble[TOTAL_ROWS][TOTAL_COLS];
     }
 
@@ -59,10 +52,10 @@ public class BubbleWorld
     public void drawBubble(int x, int y, Color fill)
     {
         // put your code here
-        Bubble circle = new Bubble(x, y, fill);
-        pane.getChildren().add(circle.getBubble());
-        /*bubbleGrid[line][columns] = circle;
-        pane.getChildren().add(bubbles[line][columns]);*/
+        Bubble bubble = new Bubble(posOnPane(x), posOnPane(y), RADIUS);
+        bubble.setColor(fill);
+        //pane.getChildren().add(bubble.getCircle());
+        bubbleGrid[gridPos(y)][gridPos(y)] = bubble;
     }
 
     public boolean hasBubble(int row, int col)
@@ -72,6 +65,37 @@ public class BubbleWorld
             return true;
         }
         return false;
+    }
+
+    /**
+     * posOnPane - replace this comment with your own
+     *
+     * @param  coord  the coordinate of the mouse click (the x or the y)
+     * @return    the pane center coordinate (x or y)
+     */
+    public int posOnPane(int coord)
+    {
+        return ((gridPos(coord) + 1) * (int)RADIUS);
+    }
+
+    /**
+     * gridPos - replace this comment with your own
+     *
+     * @param  coord  the coordinate of the mouse click (the x or the y)
+     * @return    the matrix position (col or row number)
+     */
+    public int gridPos(int coord)
+    {
+        double rest = (double)coord % (double)RADIUS;
+
+        if(rest < (double)RADIUS/2)
+        {
+            return (int)(((double)coord - rest)/RADIUS);
+        }
+        else
+        {
+            return (int)(((double)coord + (double)RADIUS - rest)/RADIUS);   
+        }
     }
 
 

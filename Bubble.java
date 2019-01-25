@@ -10,29 +10,18 @@ import javafx.scene.shape.*;
 public class Bubble
 {
     // instance variables - replace the example below with your own
-    private final int RADIUS = 15;
-    private Color fillColor = Color.WHITE;
+    private Color[] fillColor = {Color.BLUE, Color.RED};
     private Circle circle;
-
 
     /**
      * Constructor for objects of class Bubble
      */
-    public Bubble()
+    public Bubble(int x, int y, double radius)
     {
-        circle = new Circle(center.getX(), center.getY(), RADIUS);
-        circle.setFill(fillColor);
+        this.circle = new Circle(x, y, radius);
     }
 
-    public Bubble(int x, int y, Color fill)
-    {
-        this.setCenter(x, y);
-        this.setColor(fill);
-        circle = new Circle(center.getX(), center.getY(), RADIUS);
-        circle.setFill(fillColor);
-    }
-
-    public Circle getBubble()
+    public Circle getCircle()
     {
         return this.circle;
     }
@@ -45,29 +34,19 @@ public class Bubble
      */
     public Color getColor()
     {
-        // put your code here
-        return this.fillColor;
+        return (Color)this.circle.getFill();
     }
 
     public void setColor(Color fill)
     {
         // put your code here
-        this.fillColor = fill;
+        this.circle.setFill(fill);
     }
 
-    public int pointOnGrid(int x)
+    public void setColor(int color)
     {
-        int rest = x % RADIUS;
-
-        
-        if(rest < RADIUS/2)
-        {
-            return (x - rest);
-        }
-        else
-        {
-            return (x + RADIUS - rest);   
-        }
-
+        // put your code here
+        this.circle.setFill(fillColor[color]);
     }
+
 }
