@@ -2,12 +2,12 @@
 dependency1.from=BubbleWorld
 dependency1.to=Bubble
 dependency1.type=UsesDependency
-editor.fx.0.height=739
-editor.fx.0.width=816
-editor.fx.0.x=275
-editor.fx.0.y=-4
+editor.fx.0.height=0
+editor.fx.0.width=0
+editor.fx.0.x=0
+editor.fx.0.y=0
 objectbench.height=66
-objectbench.width=747
+objectbench.width=760
 package.divider.horizontal=0.6
 package.divider.vertical=0.854
 package.editor.height=420

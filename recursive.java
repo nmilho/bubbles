@@ -10,6 +10,7 @@ public class recursive
     static Scanner scanner = new Scanner(System.in);
     static final int _Rows = 10;
     static final int _Cols = 5;
+    String[] matchesArr = new String[0];
     
     static char[][] bubbleGrid = {{'A', 'V', 'V', 'A', 'V'},
                                {'V', 'A', 'V', 'V', 'V'},
@@ -53,8 +54,12 @@ public class recursive
     public void putBubble(int row, int col, char color)
     {
         bubbleGrid[row][col] = color;
-        String matches = "";
-        locateNeighbors(row, col, color, matches);
+        findMatches(row, col, color);
+        if(matchesArr.length > 2)
+        {
+            removeMatches(bubbleGrid, matchesArr);
+        }
+        matchesArr = new String[0];
     }
     
     public boolean hasBubble(int row, int col)
@@ -67,49 +72,88 @@ public class recursive
         bubbleGrid[row][col] = ' ';
     }
 
-    
+    public char[][] removeMatches(char[][] grid, String[] matches)
+    {
+        for(int i = 0; i < matches.length; i++)
+        {
+            String[] coords = matches[i].split(",");
+            int row = Integer.parseInt(coords[0]);
+            int col = Integer.parseInt(coords[1]);
+            grid[row][col] = ' ';
+        }
+        return grid;
+    }
 
-    public void locateNeighbors(int col, int row, char color, String matches) 
+
+    public void findMatches(int row, int col, char color) 
     {
     
-        if(matches.indexOf("["+row+","+col+"]") != -1)
+        if(contains(matchesArr, row + "," + col))
         {
-            System.out.println(matches);
             return;
         }
         else
         {
-            matches += "["+row+","+col+"]";
+            matchesArr = add(matchesArr, row + "," + col);
         }
 
-        //Check north
+        //linha abaixo
         if(row + 1 < _Rows)
         {
             if(bubbleGrid[row + 1][col] == color)
-                locateNeighbors(col, row + 1, color, matches);
+                findMatches(row + 1, col, color);
         }
 
-        //Check east
+        //coluna à direita
         if(col + 1 < _Cols)
         {
             if(bubbleGrid[row][col + 1] == color)
-                locateNeighbors(col + 1, row, color, matches);
+                findMatches(row, col + 1, color);
         }
 
-        //Check south
+        //linha acima
         if(row > 0)
         {
             if(bubbleGrid[row - 1][col] == color)
-                locateNeighbors(col, row - 1, color, matches);
+                findMatches(row - 1, col, color);
         }
 
-        //Check west
+        //coluna à esquerda
         if(col > 0)
         {
             if(bubbleGrid[row][col - 1] == color)
-                locateNeighbors(col - 1, row, color, matches);
+                findMatches(row, col - 1, color);
         }
 
+    }
+
+
+    public String[] incrementArr(String[] arr)
+    {
+        String[] novo = new String[arr.length+1];
+        for (int i = 0; i < arr.length; i++)
+        {
+            novo[i] = arr[i];
+        }
+        return novo;
+    }
+
+    public String[] add(String[] arr, String val)
+    {
+        arr = incrementArr(arr);
+        arr[arr.length-1] = val;
+
+        return arr;
+    }
+
+    public boolean contains(String[] arr, String val)
+    {
+        for(int i = 0; i < arr.length; i++)
+        {
+            if( val.equals(arr[i]) )
+                return true;
+        }
+        return false;
     }
 
 }

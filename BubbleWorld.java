@@ -55,7 +55,7 @@ public class BubbleWorld
         Bubble bubble = new Bubble(posOnPane(x), posOnPane(y), RADIUS);
         bubble.setColor(fill);
         //pane.getChildren().add(bubble.getCircle());
-        bubbleGrid[gridPos(y)][gridPos(y)] = bubble;
+        bubbleGrid[gridPos(x)][gridPos(y)] = bubble;
     }
 
     public boolean hasBubble(int row, int col)
