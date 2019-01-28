@@ -1,4 +1,4 @@
-
+import javafx.scene.paint.Paint;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.*;
 /**
@@ -11,28 +11,19 @@ public class Bubble
 {
     // instance variables - replace the example below with your own
     private final int RADIUS = 15;
-    private Color fillColor = Color.WHITE;
     private Circle circle;
 
 
     /**
      * Constructor for objects of class Bubble
      */
-    public Bubble()
-    {
-        circle = new Circle(center.getX(), center.getY(), RADIUS);
-        circle.setFill(fillColor);
-    }
-
     public Bubble(int x, int y, Color fill)
     {
-        this.setCenter(x, y);
-        this.setColor(fill);
-        circle = new Circle(center.getX(), center.getY(), RADIUS);
-        circle.setFill(fillColor);
+        circle = new Circle(pointOnGrid(x), pointOnGrid(y), RADIUS);
+        circle.setFill(fill);
     }
 
-    public Circle getBubble()
+    public Circle getCircle()
     {
         return this.circle;
     }
@@ -43,16 +34,16 @@ public class Bubble
      * @param  y  a sample parameter for a method
      * @return    the sum of x and y
      */
-    public Color getColor()
+    public Paint getColor()
     {
         // put your code here
-        return this.fillColor;
+        return this.circle.getFill();
     }
 
     public void setColor(Color fill)
     {
         // put your code here
-        this.fillColor = fill;
+        this.circle.setFill(fill);
     }
 
     public int pointOnGrid(int x)

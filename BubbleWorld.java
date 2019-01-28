@@ -60,7 +60,7 @@ public class BubbleWorld
     {
         // put your code here
         Bubble circle = new Bubble(x, y, fill);
-        pane.getChildren().add(circle.getBubble());
+        pane.getChildren().add(circle.getCircle());
         /*bubbleGrid[line][columns] = circle;
         pane.getChildren().add(bubbles[line][columns]);*/
     }
