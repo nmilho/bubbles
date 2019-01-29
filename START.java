@@ -64,7 +64,10 @@ public class START  {
         this.primaryStage.setScene(scene);
         this.primaryStage.show();
 
+
         this.addLine();
+
+        drawGrid(TOTAL_COLS, TOTAL_ROWS);
 
         scene.setOnMouseMoved( event ->  {
             double w = event.getX();
@@ -84,7 +87,8 @@ public class START  {
             System.out.println("---------------------------------------------------------------------");
             int random = (int)x % bubbleColors.length;
             this.grid.drawBubble(x, y, bubbleColors[random]);
-            this.pane.getChildren().add(grid.getBubbleCircle(x, y));
+            Circle cc = new Circle(x, y, 15);
+            this.pane.getChildren().add(cc);
             
         }));
 
@@ -112,4 +116,27 @@ public class START  {
         return this.grid;
     }
 
+    public void drawGrid(int cols, int lines)
+    {
+        Line ll;
+        int width = GRID_SIZE * TOTAL_COLS;
+        int height = GRID_SIZE * TOTAL_ROWS;
+        /*ll = new Line(0, 15, width, 15);
+        pane.getChildren().add(ll);*/
+        for(int i = 0; i < lines*2; i++)
+        {
+            System.out.println("startX=0     startY=" + i*GRID_SIZE/2 + "    endX=" + width + "    endY=" + i*GRID_SIZE/2);
+            ll = new Line(0, i*GRID_SIZE/2, width, i*GRID_SIZE/2);
+            pane.getChildren().add(ll);
+            
+        }
+
+        for(int i = 0; i < cols*2; i++)
+        {
+            System.out.println("startX=" + i*GRID_SIZE/2 + "     startY=0    endX=" + i*GRID_SIZE/2 + "    endY=" + height);
+            ll = new Line(i*GRID_SIZE/2, 0, i*GRID_SIZE/2, height);
+            pane.getChildren().add(ll);
+            
+        }
+    }
 } // END class Begin

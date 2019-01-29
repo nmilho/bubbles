@@ -13,4 +13,6 @@ comment5.params=
 comment5.target=javafx.scene.layout.Pane\ getPane()
 comment6.params=
 comment6.target=BubbleWorld\ getGrid()
-numComments=7
+comment7.params=cols\ lines
+comment7.target=void\ drawGrid(int,\ int)
+numComments=8
