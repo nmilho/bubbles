@@ -2,39 +2,25 @@
 dependency1.from=BubbleWorld
 dependency1.to=Bubble
 dependency1.type=UsesDependency
-<<<<<<< HEAD
-editor.fx.0.height=0
-editor.fx.0.width=0
-editor.fx.0.x=0
-editor.fx.0.y=0
-objectbench.height=66
+dependency2.from=START
+dependency2.to=BubbleWorld
+dependency2.type=UsesDependency
+editor.fx.0.height=739
+editor.fx.0.width=816
+editor.fx.0.x=534
+editor.fx.0.y=2
+objectbench.height=69
 objectbench.width=760
 package.divider.horizontal=0.6
-package.divider.vertical=0.854
-package.editor.height=420
+package.divider.vertical=0.848
+package.editor.height=417
 package.editor.width=651
 package.editor.x=431
 package.editor.y=20
 package.frame.height=600
 package.frame.width=800
-=======
-editor.fx.0.height=828
-editor.fx.0.width=999
-editor.fx.0.x=2760
-editor.fx.0.y=74
-objectbench.height=120
-objectbench.width=683
-package.divider.horizontal=0.6
-package.divider.vertical=0.746
-package.editor.height=366
-package.editor.width=593
-package.editor.x=2016
-package.editor.y=196
-package.frame.height=600
-package.frame.width=723
->>>>>>> master
-package.numDependencies=1
-package.numTargets=4
+package.numDependencies=2
+package.numTargets=5
 package.showExtends=true
 package.showUses=true
 project.charset=UTF-8
@@ -48,46 +34,33 @@ target1.name=teste
 target1.showInterface=false
 target1.type=ClassTarget
 target1.width=80
-<<<<<<< HEAD
 target1.x=430
 target1.y=170
-=======
-target1.x=470
-target1.y=230
->>>>>>> master
 target2.height=50
 target2.name=Bubble
 target2.showInterface=false
 target2.type=ClassTarget
 target2.width=80
-<<<<<<< HEAD
 target2.x=190
 target2.y=80
-=======
-target2.x=10
-target2.y=110
->>>>>>> master
 target3.height=50
 target3.name=BubbleWorld
 target3.showInterface=false
 target3.type=ClassTarget
 target3.width=110
-<<<<<<< HEAD
 target3.x=50
 target3.y=150
-=======
-target3.x=130
-target3.y=20
->>>>>>> master
 target4.height=50
-target4.name=recursive
+target4.name=START
 target4.showInterface=false
 target4.type=ClassTarget
-target4.width=80
-<<<<<<< HEAD
-target4.x=290
-target4.y=170
-=======
-target4.x=360
-target4.y=230
->>>>>>> master
+target4.width=100
+target4.x=128
+target4.y=272
+target5.height=50
+target5.name=recursive
+target5.showInterface=false
+target5.type=ClassTarget
+target5.width=80
+target5.x=290
+target5.y=170

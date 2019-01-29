@@ -20,11 +20,7 @@ import javafx.scene.paint.Color;
  */
 public class BubbleWorld
 {
-    // instance variables - replace the example below with your own
-    private Pane pane;
-    private int GRID_SIZE = 30;
-    private int TOTAL_COLS = 5;
-    private int TOTAL_ROWS = 10;
+    // instance variables - replace the example below with your own    
     private Bubble [][] bubbleGrid;
     private static int RADIUS = 15;
     
@@ -34,13 +30,13 @@ public class BubbleWorld
     /**
      * Constructor for objects of class BubbleWorld
      */
-    public BubbleWorld()
+    public BubbleWorld(int cols, int rows)
     {
         // initialise instance variables
         /*this.pane = new Pane();
         this.pane.setPrefSize(TOTAL_COLS * GRID_SIZE, (TOTAL_ROWS) * GRID_SIZE);
         Scene scene = new Scene(this.pane, Color.AZURE);*/
-        bubbleGrid = new Bubble[TOTAL_ROWS][TOTAL_COLS];
+        bubbleGrid = new Bubble[cols][rows];
     }
 
     /**
@@ -58,13 +54,23 @@ public class BubbleWorld
         bubbleGrid[gridPos(x)][gridPos(y)] = bubble;
     }
 
-    public boolean hasBubble(int row, int col)
+    public boolean hasBubble(int col, int row)
     {
-        if(bubbleGrid[row][col] != null)
+        if(bubbleGrid[col][row] != null)
         {
             return true;
         }
         return false;
+    }
+
+    public Bubble getBubble(int x, int y)
+    {
+        return bubbleGrid[gridPos(x)][gridPos(y)];
+    }
+
+    public Circle getBubbleCircle(int x, int y)
+    {
+        return bubbleGrid[gridPos(x)][gridPos(y)].getCircle();
     }
 
     /**

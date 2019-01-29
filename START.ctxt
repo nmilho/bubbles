@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=START
+comment0.text=\ \r\n\ @author\ Gon\u00E7alo\ Lopes\r\n\ @version\ 2018-12-14\r\n
+comment1.params=
+comment1.target=void\ launch()
+comment2.params=
+comment2.target=void\ start()
+comment3.params=
+comment3.target=void\ addLine()
+comment4.params=x\ y
+comment4.target=void\ moveEndOfLine(double,\ double)
+comment5.params=
+comment5.target=javafx.scene.layout.Pane\ getPane()
+comment6.params=
+comment6.target=BubbleWorld\ getGrid()
+numComments=7
