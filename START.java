@@ -30,6 +30,7 @@ public class START  {
 
     private int TOTAL_COLS = 5;
     private int TOTAL_ROWS = 10;
+    private int RADIUS = 15;
 
 
     private Pane pane;    
@@ -81,9 +82,9 @@ public class START  {
             System.out.println("Coords");
             System.out.println("X=" + x + "   ---   Y=" + y);
             System.out.println("PosOnPane");
-            System.out.println("X=" + grid.posOnPane(x) + "   ---   Y=" + grid.posOnPane(y));
+            System.out.println("X=" + this.posOnPane(x) + "   ---   Y=" + this.posOnPane(y));
             System.out.println("GridPos");
-            System.out.println("X=" + grid.gridPos(x) + "   ---   Y=" + grid.gridPos(y));
+            System.out.println("X=" + this.gridPos(x) + "   ---   Y=" + this.gridPos(y));
             System.out.println("---------------------------------------------------------------------");
             int random = (int)x % bubbleColors.length;
             this.grid.drawBubble(x, y, bubbleColors[random]);
@@ -138,5 +139,37 @@ public class START  {
             pane.getChildren().add(ll);
             
         }
+    }
+
+    /**
+     * posOnPane - replace this comment with your own
+     *
+     * @param  coord  the coordinate of the mouse click (the x or the y)
+     * @return    the pane center coordinate (x or y)
+     */
+    public int posOnPane(int coord)
+    {
+        return ((gridPos(coord) + 1) * (int)RADIUS);
+    }
+
+    /**
+     * gridPos - replace this comment with your own
+     *
+     * @param  coord  the coordinate of the mouse click (the x or the y)
+     * @return    the matrix position (col or row number)
+     */
+    public int gridPos(int coord)
+    {
+        return (int)(coord - RADIUS) / GRID_SIZE;
+        /*double rest = (double)coord % (double)RADIUS;
+
+        if(rest < (double)RADIUS/2)
+        {
+            return (int)(((double)coord - rest)/RADIUS);
+        }
+        else
+        {
+            return (int)(((double)coord + (double)RADIUS - rest)/RADIUS);   
+        }*/
     }
 } // END class Begin
