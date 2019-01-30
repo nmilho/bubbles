@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.target=MouseEventsExample
+comment0.text=\r\n\ \r\n\ @author\ Diogo\ Pina\ Manique\ \r\n\ @author\ Jo\u00E3o\ Paulo\ Barros\r\n\ @version\ 2019/01/10\r\n
+comment1.params=primaryStage
+comment1.target=void\ start(javafx.stage.Stage)
+comment2.params=
+comment2.target=void\ addLine()
+comment3.params=
+comment3.target=void\ removeLine()
+comment4.params=x\ y
+comment4.target=void\ moveEndOfLine(double,\ double)
+comment5.params=shape
+comment5.target=void\ addShape(javafx.scene.shape.Shape)
+comment5.text=\r\n\ Add\ shape\ to\ pane\ \r\n
+comment6.params=
+comment6.target=void\ start()
+comment6.text=\ execute\ this\ method\ to\ start\ the\ program\r\n\ executing\ the\ code\ in\ method\ start(Stage\ primaryStage)\ \r\n
+comment7.params=
+comment7.target=void\ launch()
+comment8.params=
+comment8.target=MouseEventsExample()
+numComments=9

@@ -70,16 +70,7 @@ public class BubbleWorld {
         return bubbleColors[randomColors[number]];
     }
     
-    /*public static void removeBubb (Pane pane, double mx, double my)
-    {
-        int line = getLine(my);
-        int columns  = getColumn(mx);
-        pane.getChildren().remove(bubbles[line - 1][columns]);
-        bubbles[line-1][columns] = null;
-        pane.getChildren().remove(bubbles[line][columns]);          
-        bubbles[line][columns] = null;
-    }*/
-    
+
     public void removeBubb (double x, double y, Pane pane)
     {
             int line = getLine(y);
@@ -130,7 +121,7 @@ public class BubbleWorld {
      */
     public int getLine(double y)
     {
-        return (int)(y - 15) / 30;
+        return (int)(y - RADIUS) / GRID_STEP;
     }
 
     /**
@@ -138,7 +129,7 @@ public class BubbleWorld {
      */
     public int getColumn(double x)
     {
-        return (int)(x - 15) / 30;
+        return (int)(x - RADIUS) / GRID_STEP;
     }
 
     public int getCenterX(double x)

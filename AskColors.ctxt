@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=AskColors
+comment0.text=\ Este\ template\ foi\ criado\ na\ \r\n\ Escola\ Superior\ de\ Tecnologia\ e\ Gest\u00E3o\ do\r\n\ Instituto\ Polit\u00C8cnico\ de\ Beja\r\n\ em\ 2016/10/05\r\n\ -----------------------------------------------------\r\n\ Esta\ classe\ cria\ um\ programa\ utilizando\ JavaFX\ que\ funciona\ dentro\ do\ BLueJ\ e\r\n\ com\ um\ "Pane"\ para\ desenho\ de\ "Shapes"\r\n\ \r\n\ Deve\ criar\ um\ objeto\ da\ classe\ GUI\ e\ depois\ chamar\ o\ m\u00E9todo\ launch()\r\n\ \r\n\ Adicione\ aqui\ uma\ descri\u00E7\u00E3o\ da\ classe,\ o\ seu\ nome\ e\ a\ data\r\n\ @author\ (o\ seu\ nome)\ \r\n\ @version\ (n\u00FAmero\ de\ vers\u00E3o\ ou\ data)\r\n\ \r\n\ O\ programa\ deve\ ser\ escrito\ em\ ingl\u00EAs.\r\n
+comment1.params=
+comment1.target=int\ ask()
+comment2.params=
+comment2.target=int\ numberColors()
+numComments=3

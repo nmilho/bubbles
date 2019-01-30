@@ -71,6 +71,7 @@ public class START  {
                     moveEndOfLine(w, k);
                 }
             });
+        
         scene.setOnMousePressed(((MouseEvent event) -> {
                 double x = event.getX();
                 double y = event.getY();

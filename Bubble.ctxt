@@ -1,16 +1,10 @@
 #BlueJ class context
 comment0.target=Bubble
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Bubble\ here.\r\n\r\n\ @author\ (your\ name)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
-comment1.params=x\ y\ radius
-comment1.target=Bubble(int,\ int,\ double)
-comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Bubble\r\n
+comment0.text=\ Este\ template\ foi\ criado\ na\ \r\n\ Escola\ Superior\ de\ Tecnologia\ e\ Gest\u00E3o\ do\r\n\ Instituto\ Polit\u00C8cnico\ de\ Beja\r\n\ em\ 2016/10/05\r\n\ -----------------------------------------------------\r\n\ Esta\ classe\ cria\ um\ programa\ utilizando\ JavaFX\ que\ funciona\ dentro\ do\ BLueJ\ e\r\n\ com\ um\ "Pane"\ para\ desenho\ de\ "Shapes"\r\n\ \r\n\ Deve\ criar\ um\ objeto\ da\ classe\ GUI\ e\ depois\ chamar\ o\ m\u00E9todo\ launch()\r\n\ \r\n\ Adicione\ aqui\ uma\ descri\u00E7\u00E3o\ da\ classe,\ o\ seu\ nome\ e\ a\ data\r\n\ @author\ (o\ seu\ nome)\ \r\n\ @version\ (n\u00FAmero\ de\ vers\u00E3o\ ou\ data)\r\n\ \r\n\ O\ programa\ deve\ ser\ escrito\ em\ ingl\u00EAs.\ Color\ []\ bubbleColors\ \ \ int\ []\ randomColors\r\n
+comment1.params=x\ y\ RADIUS\ fill
+comment1.target=Bubble(int,\ int,\ int,\ javafx.scene.paint.Color)
 comment2.params=
 comment2.target=javafx.scene.shape.Circle\ getCircle()
 comment3.params=
 comment3.target=javafx.scene.paint.Color\ getColor()
-comment3.text=\r\n\ An\ example\ of\ a\ method\ -\ replace\ this\ comment\ with\ your\ own\r\n\r\n\ @param\ \ y\ \ a\ sample\ parameter\ for\ a\ method\r\n\ @return\ \ \ \ the\ sum\ of\ x\ and\ y\r\n
-comment4.params=fill
-comment4.target=void\ setColor(javafx.scene.paint.Color)
-comment5.params=color
-comment5.target=void\ setColor(int)
-numComments=6
+numComments=4
