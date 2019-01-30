@@ -26,25 +26,29 @@ import javafx.scene.paint.Color;
  * @author (o seu nome) 
  * @version (número de versão ou data)
  * 
- * O programa deve ser escrito em inglês. Color [] bubbleColors   int [] randomColors
+ * O programa deve ser escrito em inglês.
  */
-public class Bubble { 
+public class AskColumns extends Group { 
+    private static int ask()
+    {        
+        TextInputDialog dialog = new TextInputDialog("15");
+        dialog.setTitle("BUBBLE SHOOTER");
+        dialog.setHeaderText("INDIQUE QUANTAS COLUNAS PRETENDE (entre 15 e 20)");
+        dialog.setContentText("Introduza o número e colunas :");
+        Optional<String> result = dialog.showAndWait();
+        int columns = Integer.parseInt(result.get());   
+        return columns; 
+    }
 
-    private Circle circle;
-    
-    public Bubble(int x, int y, int RADIUS, Color fill)
+    public static int columns ()
     {
-        this.circle = new Circle(x, y, RADIUS);
-        this.circle.setFill(fill);
+       int columns = ask();
+       if (columns < 15 || columns > 20)
+        {
+            do {
+                 columns = ask();
+            } while (columns < 15 || columns > 20);
+        }
+        return columns;
     }
-    
-    public Circle getCircle()
-    {
-        return this.circle;
-    }
-    
-    public Color getColor ()
-    {
-        return (Color) this.circle.getFill();
-    }
-} // END class Bubble
+} // END class askColumns

@@ -119,7 +119,7 @@ public class recursive
         }
 
         //coluna à esquerda
-        if(col > 0)
+         if(col > 0)
         {
             if(bubbleGrid[row][col - 1] == color)
                 findMatches(row, col - 1, color);

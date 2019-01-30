@@ -26,25 +26,29 @@ import javafx.scene.paint.Color;
  * @author (o seu nome) 
  * @version (número de versão ou data)
  * 
- * O programa deve ser escrito em inglês. Color [] bubbleColors   int [] randomColors
+ * O programa deve ser escrito em inglês.
  */
-public class Bubble { 
+public class AskLines extends Group { 
+    private static int ask()
+    {        
+        TextInputDialog dialog = new TextInputDialog("7");
+        dialog.setTitle("BUBBLE SHOOTER");
+        dialog.setHeaderText("INDIQUE QUANTAS LINHAS PRETENDE (entre 7 e 10)");
+        dialog.setContentText("Introduza o número e linhas :");
+        Optional<String> result = dialog.showAndWait();
+        int lines = Integer.parseInt(result.get());
+        return lines;   
+    }
 
-    private Circle circle;
-    
-    public Bubble(int x, int y, int RADIUS, Color fill)
+    public static int lines ()
     {
-        this.circle = new Circle(x, y, RADIUS);
-        this.circle.setFill(fill);
+        int lines = ask();
+        if (lines < 7 || lines > 10)
+        {
+            do {
+                lines = ask();
+            } while (lines < 7 || lines > 10);
+        }   
+        return lines;
     }
-    
-    public Circle getCircle()
-    {
-        return this.circle;
-    }
-    
-    public Color getColor ()
-    {
-        return (Color) this.circle.getFill();
-    }
-} // END class Bubble
+} // END class askLines
